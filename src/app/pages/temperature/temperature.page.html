@@ -1,13 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-icon name="arrow-back" style="font-size: 2rem;" (click)="goBack()"></ion-icon>
-      </ion-buttons>
-      <ion-title>Temperatura</ion-title>
-
-    </ion-toolbar>
-    <ion-title>temperature</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" style="font-size: 2rem;" (click)="goBack()"></ion-icon>
+    </ion-buttons>
+    <ion-title>Temperatura</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -28,15 +24,16 @@
 
     <div style="text-align: center;">
       <p>
-        <ion-icon name="arrow-up" color="primary"></ion-icon>
-        {{dweet._with[0].content.current_color}}
+        <ion-icon *ngIf="dweet._with[0].content.current_color == 'verde'" name="sunny"  style="color:green; width:40px; height:40px"></ion-icon>
+        <ion-icon *ngIf="dweet._with[0].content.current_color == 'vermelha'" name="sunny" style="color:red; width:40px; height:40px"></ion-icon>
+        <ion-icon *ngIf="dweet._with[0].content.current_color == 'azul'" name="sunny" style="color:blue; width:40px; height:40px"></ion-icon>
       </p>
       <p>
-        <ion-icon name="arrow-up" color="primary"></ion-icon>
+        <ion-icon name="arrow-up"  style="color:red"></ion-icon>
         {{dweet._with[0].content.tempMax}} ºC
       </p>
       <p>
-        <ion-icon name="arrow-down" color="primary"></ion-icon>
+        <ion-icon name="arrow-down"  style="color:blue"></ion-icon>
         {{dweet._with[0].content.tempMin}} ºC
       </p>
       <p>
