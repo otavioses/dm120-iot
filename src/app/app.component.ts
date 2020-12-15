@@ -21,11 +21,15 @@ export class AppComponent implements OnInit {
       title: 'Temperatura',
       url: 'temperature',
       icon: 'paper-plane'
-    }
-    ,
+    },
     {
       title: 'Luminosidade',
       url: 'luminosidade',
+      icon: 'paper-plane'
+    },
+    {
+      title: 'Umidade',
+      url: 'umidade',
       icon: 'paper-plane'
     }
   ];
