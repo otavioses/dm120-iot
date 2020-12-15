@@ -23,6 +23,18 @@
 
     <div style="text-align: center;">
       <p>
+        <ion-icon *ngIf="dweet._with[0].content.status_buzzer == 1" name="volume-high"  style="color:red; width:40px; height:40px"></ion-icon>
+        <ion-icon *ngIf="dweet._with[0].content.status_buzzer == 0" name="volume-mute" style="color:green; width:40px; height:40px"></ion-icon>
+      </p>
+      <p>
+        <ion-icon name="arrow-up"  style="color:red"></ion-icon>
+        {{dweet._with[0].content.lumMax}} Lux
+      </p>
+      <p>
+        <ion-icon name="arrow-down"  style="color:blue"></ion-icon>
+        {{dweet._with[0].content.lumMin}} Lux
+      </p>
+      <p>
         <ion-icon name="calendar" color="primary"></ion-icon>
         {{dweet._with[0].date}}
       </p>
